@@ -16,6 +16,8 @@ stages:
     tags:
         - node
         - test
+    only:
+        - testing
     cache:
         key: node-10.15
         paths:
@@ -30,6 +32,8 @@ stages:
     tags:
         - node
         - test
+    only:
+        - testing
     cache:
         key: node-10.15
         paths:
