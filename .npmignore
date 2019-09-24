@@ -1,0 +1,13 @@
+.eslintignore
+.eslintrc
+.gitignore
+.gitlab-ci.yml
+.npmignore
+.nvmrc
+coverage
+gulpfile.js
+node_modules
+test.js
+yarn.lock
+demo.html
+docs

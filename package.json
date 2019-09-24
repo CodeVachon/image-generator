@@ -1,0 +1,40 @@
+{
+  "name": "@lpm/image-generator",
+  "version": "0.0.0",
+  "main": "./dist/module.js",
+  "description": "Generates an Image DataURL to use in an image source",
+  "repository": "git@gitlab.labx.com:lpm/image-generator.git",
+  "author": "Christopher Vachon <chrisv@labx.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp watch",
+    "build": "gulp build",
+    "dev": "gulp watch",
+    "test": "jest --coverage",
+    "watch": "jest --watch",
+    "lint": "eslint . && echo 'Lint Complete'",
+    "docs": "gulp docs"
+  },
+  "peerDependencies": {
+    "extend": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/mkdirp": "^0.5.2",
+    "@types/node": "^12.7.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-jest": "^22.15.1",
+    "extend": "^3.0.2",
+    "gulp": "4",
+    "gulp-typedoc": "^2.2.2",
+    "gulp-typescript": "^5.0.1",
+    "jest": "^24.8.0",
+    "mkdirp": "^0.5.1",
+    "ts-jest": "^24.1.0",
+    "typedoc": "^0.15.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "canvas": "^2.6.0"
+  }
+}

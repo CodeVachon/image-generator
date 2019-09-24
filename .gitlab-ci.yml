@@ -1,0 +1,53 @@
+# This folder is cached between builds
+# http://docs.gitlab.com/ce/ci/yaml/README.html#cache
+
+stages:
+    - test
+    - deploy
+
+"Test Node 8.9":
+    stage: test
+    image: node:8.9
+    script:
+        - npm install
+        - npm run build
+        - npm test
+    tags:
+        - node
+        - test
+    cache:
+        key: node-8.9
+        paths:
+            - node_modules/
+
+"Lint":
+    stage: test
+    image: node:8.9
+    script:
+        - npm install
+        - npm run lint
+    tags:
+        - node
+        - test
+    cache:
+        key: node-8.9
+        paths:
+            - node_modules/
+
+"Deploy To LPM":
+    stage: deploy
+    script:
+        - npm install
+        - npm run build
+        - npm-cli-login -u $LPM_USERNAME -p $LPM_PASSWORD -e $LPM_EMAIL -r $LPM_REGISTRY
+        - npm publish --registry $LPM_REGISTRY
+    only:
+        - master
+    cache:
+        key: node-8.9-build
+        paths:
+            - node_modules/
+    tags:
+        - docker
+        - deploy
+
