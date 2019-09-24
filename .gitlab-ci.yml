@@ -3,11 +3,12 @@
 
 stages:
     - test
+    - build
     - deploy
 
-"Test Node 8.9":
+"Test Node 10.15":
     stage: test
-    image: node:8.9
+    image: node:10.15
     script:
         - npm install
         - npm run build
@@ -16,13 +17,13 @@ stages:
         - node
         - test
     cache:
-        key: node-8.9
+        key: node-10.15
         paths:
             - node_modules/
 
 "Lint":
     stage: test
-    image: node:8.9
+    image: node:10.15
     script:
         - npm install
         - npm run lint
@@ -30,7 +31,7 @@ stages:
         - node
         - test
     cache:
-        key: node-8.9
+        key: node-10.15
         paths:
             - node_modules/
 
@@ -44,10 +45,33 @@ stages:
     only:
         - master
     cache:
-        key: node-8.9-build
+        key: node-10.15-build
         paths:
             - node_modules/
     tags:
         - docker
         - deploy
+
+pages:
+    stage: build
+    image: node:10.15-slim
+    script:
+        - npm install
+        - npm run docs
+        - mv ./docs public
+    artifacts:
+        paths:
+            - public
+    cache:
+        key: install_cache
+        paths:
+            - node_modules
+    environment:
+        name: documentation
+        url: https://lpm.pages.labx.com/image-generator/
+    only:
+        - master
+    tags:
+        - docker
+        - build
 
