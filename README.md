@@ -23,6 +23,8 @@ export default ImageNode = () => (<img src={ defaultImage("Test String") } alt="
 
 ## Options
 
+Read the [Full Documentation](https://lpm.pages.labx.com/image-generator/interfaces/_module_.expectedconfigobject.html).
+
 ```ts
 interface ExpectedConfigObject {
     fontSize?: number, // font size in PX: default 40

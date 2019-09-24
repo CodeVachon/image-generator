@@ -1,6 +1,6 @@
 {
   "name": "@lpm/image-generator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./dist/module.js",
   "description": "Generates an Image DataURL to use in an image source",
   "repository": "git@gitlab.labx.com:lpm/image-generator.git",
