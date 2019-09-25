@@ -1,10 +1,10 @@
 {
-  "name": "@lpm/image-generator",
+  "name": "@christophervachon/image-generator",
   "version": "0.0.1",
   "main": "./dist/module.js",
   "description": "Generates an Image DataURL to use in an image source",
-  "repository": "git@gitlab.labx.com:lpm/image-generator.git",
-  "author": "Christopher Vachon <chrisv@labx.com>",
+  "repository": "git@github.com:CodeVachon/image-generator.git",
+  "author": "Christopher Vachon <code@christophervachon.com>",
   "license": "MIT",
   "scripts": {
     "start": "gulp watch",
