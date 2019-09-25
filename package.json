@@ -1,10 +1,11 @@
 {
   "name": "@christophervachon/image-generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./dist/module.js",
   "description": "Generates an Image DataURL to use in an image source",
   "repository": "git@github.com:CodeVachon/image-generator.git",
   "author": "Christopher Vachon <code@christophervachon.com>",
+  "homepage": "https://codevachon.github.io/image-generator",
   "license": "MIT",
   "scripts": {
     "start": "gulp watch",
@@ -14,9 +15,6 @@
     "watch": "jest --watch",
     "lint": "eslint . && echo 'Lint Complete'",
     "docs": "gulp docs"
-  },
-  "peerDependencies": {
-    "extend": "^3.0.2"
   },
   "devDependencies": {
     "@types/jest": "^24.0.18",
