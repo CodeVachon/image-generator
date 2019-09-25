@@ -1,7 +1,8 @@
 {
   "name": "@lpm/image-generator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "./dist/module.js",
+  "types": "./lib/module.d.ts",
   "description": "Generates an Image DataURL to use in an image source",
   "repository": "git@gitlab.labx.com:lpm/image-generator.git",
   "author": "Christopher Vachon <chrisv@labx.com>",
@@ -29,6 +30,7 @@
     "gulp-typedoc": "^2.2.2",
     "gulp-typescript": "^5.0.1",
     "jest": "^24.8.0",
+    "merge2": "^1.3.0",
     "mkdirp": "^0.5.1",
     "ts-jest": "^24.1.0",
     "typedoc": "^0.15.0",
