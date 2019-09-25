@@ -3,11 +3,15 @@ const ts = require("gulp-typescript");
 const tsProject = ts.createProject("tsconfig.json");
 const typedoc = require("gulp-typedoc");
 const { writeFile } = require("fs");
+const merge = require("merge2");
 
 const build = function () {
-    return tsProject.src()
-        .pipe(tsProject())
-        .js.pipe(gulp.dest("dist"));
+    const tsPipe = tsProject.src().pipe(tsProject());
+
+    return merge([
+        tsPipe.dts.pipe(gulp.dest("dist")),
+        tsPipe.js.pipe(gulp.dest("dist"))
+    ]);
 }; // close build
 
 const watch = gulp.series(build, function watching() {
