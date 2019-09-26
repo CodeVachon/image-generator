@@ -1,8 +1,8 @@
 {
   "name": "@christophervachon/image-generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./dist/module.js",
-  "types": "./lib/module.d.ts",
+  "types": "./dist/module.d.ts",
   "description": "Generates an Image DataURL to use in an image source",
   "repository": "git@github.com:CodeVachon/image-generator.git",
   "author": "Christopher Vachon <code@christophervachon.com>",
